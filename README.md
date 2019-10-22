@@ -29,15 +29,30 @@ guidance for future practices in regularizing policy optimization algorithms.
 
 ## Installation Instructions
 
+Git clone https://github.com/rll/rllab to PATH_TO_RLLAB_FOLDER
+
+Install MuJoCo (but don't install `mujoco_py` yet) by following instructions on https://github.com/openai/mujoco-py.
+
+Copy `libglfw.so.3, libmujoco131.so` in this repository and `mjkey.txt` from the mujoco installation path to a new folder named `PATH_TO_RLLAB_FOLDER/vendor/mujoco`.
+
+Fix a typo in rllab by
+```
+vi PATH_TO_RLLAB/rllab/sampler/stateful_pool.py
+Change 
+"from joblib.pool import MemmapingPool"
+to
+"from joblib.pool import MemmappingPool"
+```
+
 Set up virtual environment using `virtualenv ENV_NAME --python=python3`
 
 Install `mujoco_py` for `MuJoCo (version 2.0)` by following the instructions on https://github.com/openai/mujoco-py
 
 Next, modify `.bashrc` (or set up a shell script before training):
 ```
-export PYTHONPATH=PATH_TO_FOLDER/baselines_release:$PYTHONPATH
-export PYTHONPATH=PATH_TO_FOLDER/rllab:$PYTHONPATH
-export PYTHONPATH=PATH_TO_FOLDER/sac_release:$PYTHONPATH
+export PYTHONPATH=PATH_TO_THIS_REPO/baselines_release:$PYTHONPATH
+export PYTHONPATH=PATH_TO_RLLAB_FOLDER:$PYTHONPATH
+export PYTHONPATH=PATH_TO_THIS_REPO/sac_release:$PYTHONPATH
 ```
 
 Next, install the required packages. Openai baseline also requires that CUDA>=9.0.
@@ -51,8 +66,9 @@ pip3 install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
 
 To train, run 
 ```
+cd PATH_TO_REPO
 python -m baselines.run --help
-python sac_release/examples/mujoco_all_sac.py --help
+python PATH_TO_REPO/sac_release/examples/mujoco_all_sac.py --help
 ```
 for the available arguments, such as the number of environments simulated in parallel, model save path, etc.
 
