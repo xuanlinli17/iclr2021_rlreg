@@ -33,7 +33,7 @@ Git clone https://github.com/rll/rllab to PATH_TO_RLLAB_FOLDER
 
 Install MuJoCo (but don't install `mujoco_py` yet) by following instructions on https://github.com/openai/mujoco-py.
 
-Copy `libglfw.so.3, libmujoco131.so` in this repository and `mjkey.txt` from the mujoco installation path to a new folder named `PATH_TO_RLLAB_FOLDER/vendor/mujoco`.
+Copy `additional_lib_for_rllab/libglfw.so.3, additional_lib_for_rllab/libmujoco131.so` in this repository and `mjkey.txt` from the mujoco key path to a new folder named `PATH_TO_RLLAB_FOLDER/vendor/mujoco`.
 
 Fix a typo in rllab by
 ```
