@@ -1,6 +1,33 @@
-## Regularization Matters for Policy Optimization
+# Regularizations in Policy Optimization
 
-### Installation instructions
+This repository contains the code for:  
+
+Regularization Matters for Policy Optimization [[arXiv]](https://arxiv.org/abs/1910.09191). Also in NeurIPS 2019 Deep RL Workshop.
+
+[Zhuang Liu](https://liuzhuang13.github.io/)\*, Xuanlin Li\*, [Bingyi Kang](scholar.google.com.sg/citations?user=NmHgX-wAAAAJ)\*, [Trevor Darrell](https://people.eecs.berkeley.edu/~trevor/) (\* equal contribution).
+
+Our code is adopted from [OpenAI Baselines](https://github.com/openai/baselines) and [SAC](https://github.com/haarnoja/sac).
+
+## Abstract 
+Deep Reinforcement Learning (Deep RL) has been receiving increasingly more
+attention thanks to its encouraging performance on a variety of control tasks.
+Yet, conventional regularization techniques in training neural networks (e.g.,
+$L_2$ regularization, dropout) have been largely ignored in RL methods,
+possibly because agents are typically trained and evaluated in the same
+environment. In this work, we present the first comprehensive study of
+regularization techniques with multiple policy optimization algorithms on
+continuous control tasks. Interestingly, we find conventional regularization
+techniques on the policy networks can often bring large improvement on the task
+performance, and the improvement is typically more significant when the task is
+more difficult. We also compare with the widely used entropy regularization and
+find $L_2$ regularization is generally better. Our findings are further
+confirmed to be robust against the choice of training hyperparameters. We also
+study the effects of regularizing different components and find that only
+regularizing the policy network is typically enough. We hope our study provides
+guidance for future practices in regularizing policy optimization algorithms.
+
+
+## Installation Instructions
 
 Set up virtual environment using `virtualenv ENV_NAME --python=python3`
 
@@ -20,7 +47,7 @@ pip3 install mpi4py roboschool==1.0.48 gym==0.13.0 click dill joblib opencv-pyth
 pip3 install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
 ```
 
-### Glossary of Command Line Arguments (usage):
+## Running
 
 To train, run 
 ```
@@ -29,7 +56,7 @@ python sac_release/examples/mujoco_all_sac.py --help
 ```
 for the available arguments, such as the number of environments simulated in parallel, model save path, etc.
 
-#### Regularization Terms:
+### Regularization Options
 ```
 l1regpi, l1regvf = L1 policy/value network regularization
 
@@ -47,7 +74,7 @@ batchnormpi, batchnormvf = Policy/value network batch normalization (True or Fal
 ent_coef = Entropy regularization coefficient
 ```
 
-Examples:
+### Examples:
 ```
 python -m baselines.run --alg=ppo2 --env=RoboschoolHumanoid-v1 --num_timesteps=5e7 --l2regpi=0.0001
 ```
@@ -63,3 +90,15 @@ python sac_release/examples/mujoco_all_sac.py --env=atlas-forward-walk-roboschoo
 ```
 Runs `sac` (Soft Actor Critic) on `RoboschoolAtlasForwardWalk` task with dropout probability = 1 - 0.9 = 0.1 on policy network (i.e. keep probability = 0.9).
 (Note that the number of training timesteps is predefined in `sac_release/examples/variant.py`)
+
+
+### Citation
+
+```
+@article{liu2019regularization,
+  title={Regularization Matters for Policy Optimization},
+  author={Liu, Zhuang and Li, Xuanlin and Kang, Bingyi and Darrell, Trevor},
+  journal={arXiv preprint arXiv:},
+  year={2019}
+}
+```
