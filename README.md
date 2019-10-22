@@ -27,8 +27,9 @@ To train, run
 python -m baselines.run --help
 python sac_release/examples/mujoco_all_sac.py --help
 ```
-for the available arguments.
+for the available arguments, such as the number of environments simulated in parallel, model save path, etc.
 
+#### Regularization Terms:
 ```
 l1regpi, l1regvf = L1 policy/value network regularization
 
