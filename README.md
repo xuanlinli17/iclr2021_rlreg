@@ -44,11 +44,15 @@ to
 "from joblib.pool import MemmappingPool"
 ```
 
-Set up virtual environment using `virtualenv ENV_NAME --python=python3`
+Set up virtual environment using 
+```
+virtualenv ENV_NAME --python=python3
+source ENV_NAME/bin/activate
+```
 
 Install `mujoco_py` for `MuJoCo (version 2.0)` by following the instructions on https://github.com/openai/mujoco-py
 
-Next, modify `.bashrc` (or set up a shell script before training):
+Next, modify `.bashrc` (or set up a shell script and `source SCRIPT.sh` before training):
 ```
 export PYTHONPATH=PATH_TO_THIS_REPO/baselines_release:$PYTHONPATH
 export PYTHONPATH=PATH_TO_RLLAB_FOLDER:$PYTHONPATH
