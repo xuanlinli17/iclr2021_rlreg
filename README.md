@@ -4,7 +4,7 @@ This repository contains the code for:
 
 Regularization Matters for Policy Optimization [[arXiv]](https://arxiv.org/abs/1910.09191). Also in NeurIPS 2019 Deep RL Workshop.
 
-[Zhuang Liu](https://liuzhuang13.github.io/)\*, Xuanlin Li\*, [Bingyi Kang](scholar.google.com.sg/citations?user=NmHgX-wAAAAJ)\*, [Trevor Darrell](https://people.eecs.berkeley.edu/~trevor/) (\* equal contribution).
+[Zhuang Liu](https://liuzhuang13.github.io/)\*, Xuanlin Li\*, [Bingyi Kang](scholar.google.com.sg/citations?user=NmHgX-wAAAAJ)\* and [Trevor Darrell](https://people.eecs.berkeley.edu/~trevor/) (\* equal contribution)
 
 Our code is adopted from [OpenAI Baselines](https://github.com/openai/baselines) and [SAC](https://github.com/haarnoja/sac).
 
@@ -12,7 +12,7 @@ Our code is adopted from [OpenAI Baselines](https://github.com/openai/baselines)
 Deep Reinforcement Learning (Deep RL) has been receiving increasingly more
 attention thanks to its encouraging performance on a variety of control tasks.
 Yet, conventional regularization techniques in training neural networks (e.g.,
-$L_2$ regularization, dropout) have been largely ignored in RL methods,
+L<sub>2</sub> regularization, dropout) have been largely ignored in RL methods,
 possibly because agents are typically trained and evaluated in the same
 environment. In this work, we present the first comprehensive study of
 regularization techniques with multiple policy optimization algorithms on
@@ -20,7 +20,7 @@ continuous control tasks. Interestingly, we find conventional regularization
 techniques on the policy networks can often bring large improvement on the task
 performance, and the improvement is typically more significant when the task is
 more difficult. We also compare with the widely used entropy regularization and
-find $L_2$ regularization is generally better. Our findings are further
+find L<sub>2</sub> regularization is generally better. Our findings are further
 confirmed to be robust against the choice of training hyperparameters. We also
 study the effects of regularizing different components and find that only
 regularizing the policy network is typically enough. We hope our study provides
@@ -98,7 +98,7 @@ Runs `sac` (Soft Actor Critic) on `RoboschoolAtlasForwardWalk` task with dropout
 @article{liu2019regularization,
   title={Regularization Matters for Policy Optimization},
   author={Liu, Zhuang and Li, Xuanlin and Kang, Bingyi and Darrell, Trevor},
-  journal={arXiv preprint arXiv:},
+  journal={arXiv preprint arXiv:1910.09191},
   year={2019}
 }
 ```
