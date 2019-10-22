@@ -37,7 +37,7 @@ Copy `libglfw.so.3, libmujoco131.so` in this repository and `mjkey.txt` from the
 
 Fix a typo in rllab by
 ```
-vi PATH_TO_RLLAB/rllab/sampler/stateful_pool.py
+vi PATH_TO_RLLAB_FOLDER/rllab/sampler/stateful_pool.py
 Change 
 "from joblib.pool import MemmapingPool"
 to
@@ -61,7 +61,7 @@ export PYTHONPATH=PATH_TO_THIS_REPO/sac_release:$PYTHONPATH
 
 Next, install the required packages. Openai baseline also requires that CUDA>=9.0.
 ```
-pip3 install tensorflow-gpu==(VERSION_THAT_COMPLIES_WITH_CUDA_INSTALLATION)
+pip3 install tensorflow-gpu==(VERSION_THAT_COMPLIES_WITH_CUDA_INSTALLATION, note that tensorflow 2.0.0 is not compatible with this repo)
 pip3 install mpi4py roboschool==1.0.48 gym==0.13.0 click dill joblib opencv-python progressbar2 tqdm theano path.py cached_property python-dateutil pyopengl mako gtimer matplotlib pyprind
 pip3 install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
 ```
@@ -70,11 +70,13 @@ pip3 install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
 
 To train, run 
 ```
-cd PATH_TO_REPO
+cd PATH_TO_THIS_REPO
 python -m baselines.run --help
 python PATH_TO_REPO/sac_release/examples/mujoco_all_sac.py --help
 ```
 for the available arguments, such as the number of environments simulated in parallel, model save path, etc.
+
+For Soft Actor Critic, `PATH_TO_THIS_REPO/sac_release/examples.variants.py` contains default environment settings. These settings are overwritten by command line arguments.
 
 ### Regularization Options
 ```
