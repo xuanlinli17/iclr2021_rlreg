@@ -52,7 +52,7 @@ source ENV_NAME/bin/activate
 
 Install `mujoco_py` for `MuJoCo (version 2.0)` by following the instructions on https://github.com/openai/mujoco-py
 
-Next, modify `.bashrc` (or set up a shell script and `source SCRIPT.sh` before training):
+Next, modify `.bashrc` (or set up a shell script named `SOMESCRIPT.sh` and `source SOMESCRIPT.sh` before training):
 ```
 export PYTHONPATH=PATH_TO_THIS_REPO/baselines_release:$PYTHONPATH
 export PYTHONPATH=PATH_TO_RLLAB_FOLDER:$PYTHONPATH
