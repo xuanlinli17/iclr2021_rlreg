@@ -2,7 +2,9 @@
 
 ### Installation instructions
 
-First, install `mujoco_py` for `MuJoCo - 2.0` by following the instructions on https://github.com/openai/mujoco-py
+Set up virtual environment using `virtualenv ENV_NAME --python=python3`
+
+Install `mujoco_py` for `MuJoCo (version 2.0)` by following the instructions on https://github.com/openai/mujoco-py
 
 Next, modify `.bashrc` (or set up a shell script before training):
 ```
@@ -13,7 +15,8 @@ export PYTHONPATH=PATH_TO_FOLDER/sac_release:$PYTHONPATH
 
 Next, install the required packages. Openai baseline also requires that CUDA>=9.0.
 ```
-pip3 install tensorflow-gpu==1.14.0 mpi4py roboschool==1.0.48 gym==0.13.0 click dill joblib opencv-python progressbar2 tqdm theano path.py cached_property python-dateutil pyopengl mako gtimer matplotlib pyprind
+pip3 install tensorflow-gpu==(VERSION_THAT_COMPLIES_WITH_CUDA_INSTALLATION)
+pip3 install mpi4py roboschool==1.0.48 gym==0.13.0 click dill joblib opencv-python progressbar2 tqdm theano path.py cached_property python-dateutil pyopengl mako gtimer matplotlib pyprind
 pip3 install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
 ```
 
