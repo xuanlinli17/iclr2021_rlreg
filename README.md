@@ -1,4 +1,4 @@
-# Regularizations in Policy Optimization
+# Regularizations in Policy Optimization - An Empirical Study on Continuous Control
 
 This repository contains the code for:  
 
@@ -9,22 +9,7 @@ Regularization Matters for Policy Optimization [[arXiv]](https://arxiv.org/abs/1
 Our code is adopted from [OpenAI Baselines](https://github.com/openai/baselines) and [SAC](https://github.com/haarnoja/sac).
 
 ## Abstract 
-Deep Reinforcement Learning (Deep RL) has been receiving increasingly more
-attention thanks to its encouraging performance on a variety of control tasks.
-Yet, conventional regularization techniques in training neural networks (e.g.,
-L<sub>2</sub> regularization, dropout) have been largely ignored in RL methods,
-possibly because agents are typically trained and evaluated in the same
-environment. In this work, we present the first comprehensive study of
-regularization techniques with multiple policy optimization algorithms on
-continuous control tasks. Interestingly, we find conventional regularization
-techniques on the policy networks can often bring large improvement on the task
-performance, and the improvement is typically more significant when the task is
-more difficult. We also compare with the widely used entropy regularization and
-find L<sub>2</sub> regularization is generally better. Our findings are further
-confirmed to be robust against the choice of training hyperparameters. We also
-study the effects of regularizing different components and find that only
-regularizing the policy network is typically enough. We hope our study provides
-guidance for future practices in regularizing policy optimization algorithms.
+Deep Reinforcement Learning (Deep RL) has been receiving increasingly more attention  thanks to its encouraging performance on a variety of control tasks. Yet, conventional regularization techniques in training neural networks (e.g., $L_2$ regularization, dropout) have been largely ignored in RL methods, possibly because agents are typically trained and evaluated in the same environment, and because the deep RL community focuses more on high-level algorithm designs. In this work, we present the first comprehensive study of regularization techniques with multiple policy optimization algorithms on continuous control tasks. Interestingly, we find conventional regularization techniques on the policy networks can often bring large improvement, especially on harder tasks. Our findings are shown to be robust against training hyperparameter variations. We also compare these techniques with the more widely used entropy regularization. In addition, we study regularizing different components and find that only regularizing the policy network is typically the best. We further analyze why regularization may help generalization in RL from four perspectives - sample complexity, reward distribution, weight norm, and noise robustness. We hope our study provides guidance for future practices in regularizing policy optimization algorithms. 
 
 
 ## Installation Instructions
