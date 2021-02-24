@@ -2,7 +2,7 @@
 
 This repository contains the code for:  
 
-Regularization Matters for Policy Optimization [[arXiv]](https://arxiv.org/abs/1910.09191). Also in NeurIPS 2019 Deep RL Workshop.
+Regularization Matters for Policy Optimization - An Empirical Study on Continuous Control [[arXiv]](https://arxiv.org/abs/1910.09191). Also in ICLR 2021 and NeurIPS 2019 Deep RL Workshop.
 
 [Zhuang Liu](https://liuzhuang13.github.io/)\*, Xuanlin Li\*, [Bingyi Kang](scholar.google.com.sg/citations?user=NmHgX-wAAAAJ)\* and [Trevor Darrell](https://people.eecs.berkeley.edu/~trevor/) (\* equal contribution)
 
