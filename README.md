@@ -103,9 +103,9 @@ Runs `sac` (Soft Actor Critic) on `RoboschoolAtlasForwardWalk` task with dropout
 
 ```
 @article{liu2019regularization,
-  title={Regularization Matters for Policy Optimization},
+  title={Regularization Matters for Policy Optimization - An Empirical Study on Continuous Control},
   author={Liu, Zhuang and Li, Xuanlin and Kang, Bingyi and Darrell, Trevor},
-  journal={arXiv preprint arXiv:1910.09191},
-  year={2019}
+  booktitle={International Conference on Learning Representations},
+  year={2021}  
 }
 ```
